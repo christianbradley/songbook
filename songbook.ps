@@ -1,0 +1,3274 @@
+%!PS-Adobe-1.0
+%%Title: A nicely formatted song sheet
+%%Creator: Chordii 4.3.0
+%%DocumentFonts: (atend)
+%%Pages: (atend)
+%%BoundingBox: 5 5 607 787
+%%EndComments
+/inch {72 mul } def
+%  iso.ps  reencodeing of ISO 8859-1 8-bit french characters
+%
+/reencodedict 5 dict def
+/Re-encode
+  { reencodedict begin
+      /newencoding exch def
+      /newfontname exch def
+      /basefontname exch def
+
+      /basefontdict basefontname findfont def
+
+      /newfont basefontdict maxlength dict def
+
+      basefontdict
+      {  exch dup dup /FID ne exch /Encoding ne and
+	{ exch newfont 3 1 roll put }
+	{ pop pop }
+	ifelse
+      } forall
+      newfont /FontName newfontname put
+      newfont /Encoding newencoding put
+      newfontname newfont definefont pop
+      end
+   } def
+
+/ISO 256 array def
+
+0 1 255 { ISO exch /.notdef put } for
+ISO
+
+  dup 8#040 /space put
+  dup 8#041 /exclam put
+  dup 8#042 /quotedbl put
+  dup 8#043 /numbersign put
+  dup 8#044 /dollar put
+  dup 8#045 /percent put
+  dup 8#046 /ampersand put
+  dup 8#047 /quotesingle put
+  dup 8#050 /parenleft put
+  dup 8#051 /parenright put
+  dup 8#052 /asterisk put
+  dup 8#053 /plus put
+  dup 8#054 /comma put
+  dup 8#055 /hyphen put
+  dup 8#056 /period put
+  dup 8#057 /slash put
+  dup 8#060 /zero put
+  dup 8#061 /one put
+  dup 8#062 /two put
+  dup 8#063 /three put
+  dup 8#064 /four put
+  dup 8#065 /five put
+  dup 8#066 /six put
+  dup 8#067 /seven put
+  dup 8#070 /eight put
+  dup 8#071 /nine put
+  dup 8#072 /colon put
+  dup 8#073 /semicolon put
+  dup 8#074 /less put
+  dup 8#075 /equal put
+  dup 8#076 /greater put
+  dup 8#077 /question put
+  dup 8#100 /at put
+  dup 8#101 /A put
+  dup 8#102 /B put
+  dup 8#103 /C put
+  dup 8#104 /D put
+  dup 8#105 /E put
+  dup 8#106 /F put
+  dup 8#107 /G put
+  dup 8#110 /H put
+  dup 8#111 /I put
+  dup 8#112 /J put
+  dup 8#113 /K put
+  dup 8#114 /L put
+  dup 8#115 /M put
+  dup 8#116 /N put
+  dup 8#117 /O put
+  dup 8#120 /P put
+  dup 8#121 /Q put
+  dup 8#122 /R put
+  dup 8#123 /S put
+  dup 8#124 /T put
+  dup 8#125 /U put
+  dup 8#126 /V put
+  dup 8#127 /W put
+  dup 8#130 /X put
+  dup 8#131 /Y put
+  dup 8#132 /Z put
+  dup 8#133 /bracketleft put
+  dup 8#134 /backslash put
+  dup 8#135 /bracketright put
+  dup 8#136 /asciicircum put
+  dup 8#137 /underscore put
+  dup 8#140 /grave put
+  dup 8#141 /a put
+  dup 8#142 /b put
+  dup 8#143 /c put
+  dup 8#144 /d put
+  dup 8#145 /e put
+  dup 8#146 /f put
+  dup 8#147 /g put
+  dup 8#150 /h put
+  dup 8#151 /i put
+  dup 8#152 /j put
+  dup 8#153 /k put
+  dup 8#154 /l put
+  dup 8#155 /m put
+  dup 8#156 /n put
+  dup 8#157 /o put
+  dup 8#160 /p put
+  dup 8#161 /q put
+  dup 8#162 /r put
+  dup 8#163 /s put
+  dup 8#164 /t put
+  dup 8#165 /u put
+  dup 8#166 /v put
+  dup 8#167 /w put
+  dup 8#170 /x put
+  dup 8#171 /y put
+  dup 8#172 /z put
+  dup 8#173 /braceleft put
+  dup 8#174 /bar put
+  dup 8#175 /braceright put
+  dup 8#176 /asciitilde put
+  dup 8#241 /exclamdown put
+  dup 8#242 /cent put
+  dup 8#243 /sterling put
+  dup 8#244 /currency put
+  dup 8#245 /yen put
+  dup 8#246 /bar put
+  dup 8#247 /section put
+  dup 8#250 /dieresis put
+  dup 8#251 /copyright put
+  dup 8#252 /ordfeminine put
+  dup 8#253 /guillemotleft put
+  dup 8#254 /.notdef put
+  dup 8#255 /endash put
+  dup 8#256 /registered put
+  dup 8#257 /tilde put
+  dup 8#260 /ring put
+  dup 8#261 /.notdef put
+  dup 8#262 /.notdef put
+  dup 8#263 /.notdef put
+  dup 8#264 /acute put
+  dup 8#265 /.notdef put
+  dup 8#266 /paragraph put
+  dup 8#267 /.notdef put
+  dup 8#270 /cedilla put
+  dup 8#271 /.notdef put
+  dup 8#272 /ordmasculine put
+  dup 8#273 /guillemotright put
+  dup 8#274 /.notdef put
+  dup 8#275 /circumflex put
+  dup 8#276 /dotlessi put
+  dup 8#277 /questiondown put
+  dup 8#300 /Agrave put
+  dup 8#301 /Aacute put
+  dup 8#302 /Acircumflex put
+  dup 8#303 /Atilde put
+  dup 8#304 /Adieresis put
+  dup 8#305 /Aring put
+  dup 8#306 /AE put
+  dup 8#307 /Ccedilla put
+  dup 8#310 /Egrave put
+  dup 8#311 /Eacute put
+  dup 8#312 /Ecircumflex put
+  dup 8#313 /Edieresis put
+  dup 8#314 /Igrave put
+  dup 8#315 /Iacute put
+  dup 8#316 /Icircumflex put
+  dup 8#317 /Idieresis put
+  dup 8#320 /.notdef put
+  dup 8#321 /Ntilde put
+  dup 8#322 /Ograve put
+  dup 8#323 /Oacute put
+  dup 8#324 /Ocircumflex put
+  dup 8#325 /Otilde put
+  dup 8#326 /Odieresis put
+  dup 8#327 /.notdef put
+  dup 8#330 /Oslash put
+  dup 8#331 /Ugrave put
+  dup 8#332 /Uacute put
+  dup 8#333 /Ucircumflex put
+  dup 8#334 /Udieresis put
+  dup 8#335 /.notdef put
+  dup 8#336 /.notdef put
+  dup 8#337 /germandbls put
+  dup 8#340 /agrave put
+  dup 8#341 /aacute put
+  dup 8#342 /acircumflex put
+  dup 8#343 /atilde put
+  dup 8#344 /adieresis put
+  dup 8#345 /aring put
+  dup 8#346 /ae put
+  dup 8#347 /ccedilla put
+  dup 8#350 /egrave put
+  dup 8#351 /eacute put
+  dup 8#352 /ecircumflex put
+  dup 8#353 /edieresis put
+  dup 8#354 /igrave put
+  dup 8#355 /iacute put
+  dup 8#356 /icircumflex put
+  dup 8#357 /idieresis put
+  dup 8#360 /.notdef put
+  dup 8#361 /ntilde put
+  dup 8#362 /ograve put
+  dup 8#363 /oacute put
+  dup 8#364 /ocircumflex put
+  dup 8#365 /otilde put
+  dup 8#366 /odieresis put
+  dup 8#367 /.notdef put
+  dup 8#370 /oslash put
+  dup 8#371 /ugrave put
+  dup 8#372 /uacute put
+  dup 8#373 /ucircumflex put
+  dup 8#374 /udieresis put
+  dup 8#375 /ydieresis put
+  dup 8#376 /.notdef put
+  pop
+
+
+/CHORD_FONT { /Arial-Bold findfont 9 scalefont } def
+/Arial-Bold /Arial-Bold ISO Re-encode
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+% routines for the drawing of the chords
+/grid { 
+	currentpoint currentpoint
+	6 { 0 cagesizeX rlineto incr cagesize neg incr add rmoveto } repeat
+	moveto
+	5 { cagesize 0 rlineto 0 cagesize sub incr rmoveto } repeat
+	1 setlinewidth stroke 
+	moveto
+	currentpoint
+	0 cagesizeX rmoveto cagesize 0 rlineto
+	cagesize 30 div setlinewidth stroke
+	moveto
+} def
+
+/dot {
+	/fret exch def /str exch def
+	/x 5  fret abs sub incr mul half-incr sub def
+	/y 6 str sub incr mul def
+	currentpoint
+	y x rmoveto
+	0 setgray
+	fret -1 eq
+	  {
+	  0 incr rmoveto
+	  check neg  check neg rmoveto
+	  check check rlineto check check rlineto
+	  check neg check neg rmoveto check neg check rmoveto
+  	  check check neg rlineto check check neg rlineto
+	  cagesize 50 div setlinewidth stroke
+	  }
+	  {  fret 0 ne
+	    { currentpoint dot-size 0 360 arc fill}
+	    { currentpoint
+	      check 0 360 newpath arc
+	      cagesize 50 div setlinewidth
+	    }
+	    ifelse 
+	    stroke 
+	  }
+	  ifelse
+	moveto
+} def	
+
+/dots {
+	grid
+	/origin exch def
+	/fret-displ exch def
+	  1 1 6
+	  {
+	    /str exch def
+	    /fret exch def
+	    fret -2 ne {str fret dot} if
+	  } for
+
+	fret-displ 1 ne
+	{
+    	  currentpoint displ-font setfont
+    	  0 cagesize fret-displ 10 ge {1.75} {3} ifelse div sub
+	  cagesizeX incr sub rmoveto
+    	  /char 6 string def fret-displ char cvs show moveto 
+	} if
+
+	/chord-name exch def
+	currentpoint displ-font setfont
+	0 cagesizeX cagesizeX 15 div add dot-size 3 mul add rmoveto
+	chord-name stringwidth pop 2 div cagesize 2 div exch sub 0 rmoveto
+	chord-name show
+	0 cagesize 10 div rmoveto
+	origin 2 eq { (*) show} if
+	origin 1 eq { (**) show} if
+	chord-font setfont moveto
+} def
+
+/cagesize 30 def
+/incr cagesize 5 div def
+/cagesizeX incr 4 mul def
+/half-incr incr 2 div def
+/dot-size cagesize 15 div def
+/check cagesize 20 div def
+
+/chord-font /Times-Roman findfont cagesize 5 div scalefont def
+/displ-font /Times-Roman findfont cagesize 3 div scalefont def
+% end of the routines for the drawing of the chords
+
+%%EndProlog
+%%Page: "1" 1
+%%BeginPageSetup
+%%EndPageSetup
+/TEXT_FONT { /Arial findfont 17 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 15 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+( Blood and Bone) dup stringwidth pop 2 div
+612.000000 2 div exch sub 756 moveto
+show
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+( Words and Music \(c\) 2012 Christian Bradley) dup stringwidth pop 2 div
+612.000000 2 div exch sub 739 moveto
+show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+677 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Some people say that we're ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (C#m7b5) stringwidth pop add def
+677 moveto
+CHORD_FONT setfont
+(C#m7b5) show
+TEXT_FONT setfont
+( Some people say that we're  made from the ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+677 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 666 moveto
+( Some people say that we're  made from the  stars) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+656 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+( sunlight that's carried from ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+656 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+( sunlight that's carried from  galaxies so far a) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+656 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+72 645 moveto
+( sunlight that's carried from  galaxies so far away) show
+/minhpos 72 def
+TEXT_FONT setfont
+(But I ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+635 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 624 moveto
+(But I  know that's not true) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Cause if ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+614 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+(Cause if  I'm made of ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm7/A) stringwidth pop add def
+614 moveto
+CHORD_FONT setfont
+(Bm7/A) show
+TEXT_FONT setfont
+(Cause if  I'm made of  stars why can't ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+614 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+(Cause if  I'm made of  stars why can't  I shine for ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+614 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 603 moveto
+(Cause if  I'm made of  stars why can't  I shine for  you?) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+573 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Maybe we're made from more ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (C#m7b5) stringwidth pop add def
+573 moveto
+CHORD_FONT setfont
+(C#m7b5) show
+TEXT_FONT setfont
+( Maybe we're made from more  beautiful ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+573 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 562 moveto
+( Maybe we're made from more  beautiful  things) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Like the ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+552 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+(Like the  love of God, like ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+552 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+(Like the  love of God, like  water from springs - I'd ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+552 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+72 541 moveto
+(Like the  love of God, like  water from springs - I'd  say) show
+/minhpos 72 def
+TEXT_FONT setfont
+(That it ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+531 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 520 moveto
+(That it  sounds to be true) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Cause if ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+510 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+(Cause if  I'm made of ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm7/A) stringwidth pop add def
+510 moveto
+CHORD_FONT setfont
+(Bm7/A) show
+TEXT_FONT setfont
+(Cause if  I'm made of  love then ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+510 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+(Cause if  I'm made of  love then  so are ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+510 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 499 moveto
+(Cause if  I'm made of  love then  so are  you) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+469 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Hallelujah! ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+469 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Hallelujah!  Halle) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+469 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 458 moveto
+( Hallelujah!  Hallelujah! ) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+448 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm7/A) stringwidth pop add def
+448 moveto
+CHORD_FONT setfont
+(Bm7/A) show
+TEXT_FONT setfont
+( Halle - ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (GM7) stringwidth pop add def
+448 moveto
+CHORD_FONT setfont
+(GM7) show
+TEXT_FONT setfont
+( Halle -  luja - ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+448 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+( Halle -  luja -  ah! We're ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+448 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+( Halle -  luja -  ah! We're  more than blood and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+448 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Halle -  luja -  ah! We're  more than blood and  bone! ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+448 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 437 moveto
+( Halle -  luja -  ah! We're  more than blood and  bone! .) show
+TEXT_FONT setfont
+.9  setgray
+12  setlinewidth
+newpath
+70 429 moveto
+(repeat ) stringwidth rlineto
+stroke
+72 425 moveto
+0  setgray
+1 setlinewidth
+(repeat) show
+1  setlinewidth
+newpath
+62 478 moveto
+0 -53 rlineto
+closepath
+stroke
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+375 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+72 364 moveto
+( Some people say we come from outer space) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+354 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Others say the world was made in ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+354 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 343 moveto
+( Others say the world was made in  seven days) show
+/minhpos 72 def
+TEXT_FONT setfont
+(and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+333 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+(and  maybe there's a ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm7/A) stringwidth pop add def
+333 moveto
+CHORD_FONT setfont
+(Bm7/A) show
+TEXT_FONT setfont
+(and  maybe there's a  God and we should ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (GM7) stringwidth pop add def
+333 moveto
+CHORD_FONT setfont
+(GM7) show
+TEXT_FONT setfont
+(and  maybe there's a  God and we should  sing his ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+333 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+72 322 moveto
+(and  maybe there's a  God and we should  sing his  praise ) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Cause we're ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+312 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+(Cause we're  more than blood and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+312 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+(Cause we're  more than blood and  bone ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+312 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 301 moveto
+(Cause we're  more than blood and  bone ) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+271 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Hallelujah! ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+271 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Hallelujah!  Halle) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+271 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 260 moveto
+( Hallelujah!  Hallelujah! ) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+250 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm7/A) stringwidth pop add def
+250 moveto
+CHORD_FONT setfont
+(Bm7/A) show
+TEXT_FONT setfont
+( Halle - ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (GM7) stringwidth pop add def
+250 moveto
+CHORD_FONT setfont
+(GM7) show
+TEXT_FONT setfont
+( Halle -  luja - ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+250 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+( Halle -  luja -  ah! We're ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+250 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+( Halle -  luja -  ah! We're  more than blood and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+250 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Halle -  luja -  ah! We're  more than blood and  bone! ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+250 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 239 moveto
+( Halle -  luja -  ah! We're  more than blood and  bone! .) show
+TEXT_FONT setfont
+.9  setgray
+12  setlinewidth
+newpath
+70 231 moveto
+(repeat ) stringwidth rlineto
+stroke
+72 227 moveto
+0  setgray
+1 setlinewidth
+(repeat) show
+1  setlinewidth
+newpath
+62 280 moveto
+0 -53 rlineto
+closepath
+stroke
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+197 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+72 186 moveto
+( Everybody's got their own philosophy) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+176 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( But where does that leave ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+176 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 165 moveto
+( But where does that leave  you and me?) show
+/minhpos 72 def
+TEXT_FONT setfont
+(I ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+155 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+(I  guess we'll never ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm7/A) stringwidth pop add def
+155 moveto
+CHORD_FONT setfont
+(Bm7/A) show
+TEXT_FONT setfont
+(I  guess we'll never  know un) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (GM7) stringwidth pop add def
+155 moveto
+CHORD_FONT setfont
+(GM7) show
+TEXT_FONT setfont
+(I  guess we'll never  know until we ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+155 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+72 144 moveto
+(I  guess we'll never  know until we  see) show
+/minhpos 72 def
+TEXT_FONT setfont
+(If we're ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+134 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+(If we're  more than blood and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+134 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+(If we're  more than blood and  bone ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+134 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 123 moveto
+(If we're  more than blood and  bone ) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+93 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Hallelujah! ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+93 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Hallelujah!  Halle) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+93 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 82 moveto
+( Hallelujah!  Hallelujah! ) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+72 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm7/A) stringwidth pop add def
+72 moveto
+CHORD_FONT setfont
+(Bm7/A) show
+TEXT_FONT setfont
+( Halle - ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (GM7) stringwidth pop add def
+72 moveto
+CHORD_FONT setfont
+(GM7) show
+TEXT_FONT setfont
+( Halle -  luja - ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+72 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+( Halle -  luja -  ah! We're ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+72 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+( Halle -  luja -  ah! We're  more than blood and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+72 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Halle -  luja -  ah! We're  more than blood and  bone! ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+72 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 61 moveto
+( Halle -  luja -  ah! We're  more than blood and  bone! .) show
+TEXT_FONT setfont
+.9  setgray
+12  setlinewidth
+newpath
+70 53 moveto
+(repeat ) stringwidth rlineto
+stroke
+72 49 moveto
+0  setgray
+1 setlinewidth
+(repeat) show
+1  setlinewidth
+newpath
+62 102 moveto
+0 -53 rlineto
+closepath
+stroke
+1  setlinewidth
+0  setgray
+/TEXT_FONT { /Arial findfont 10 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 8 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+newpath
+72.000000 30.000000 moveto
+468.000000 0 rlineto
+stroke
+(Page 1) dup stringwidth pop
+612.000000 exch sub 1 inch sub 40.000000 3 div moveto
+show
+showpage
+%%EndPage: "1" 1
+%%Page: "2" 2
+%%BeginPageSetup
+%%EndPageSetup
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+736 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+( I guess there's some things that ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+736 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+72 725 moveto
+( I guess there's some things that  We will never know) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+715 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+( Like: when we die oh ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+715 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+72 704 moveto
+( Like: when we die oh  where do we go?) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+694 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+( But there is one thing that's ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+694 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+72 683 moveto
+( But there is one thing that's  Just so clear to me) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+673 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+( There's a lot more to this life than ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+673 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 662 moveto
+( There's a lot more to this life than  just what we see...) show
+TEXT_FONT setfont
+.9  setgray
+12  setlinewidth
+newpath
+70 654 moveto
+(instrumental ) stringwidth rlineto
+stroke
+72 650 moveto
+0  setgray
+1 setlinewidth
+(instrumental) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+620 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+72 609 moveto
+( Some people get their kicks from the divine) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+599 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Other people find it in a ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+599 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 588 moveto
+( Other people find it in a  bottle of wine) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+578 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( But in the end I ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm7/A) stringwidth pop add def
+578 moveto
+CHORD_FONT setfont
+(Bm7/A) show
+TEXT_FONT setfont
+( But in the end I  guess it's just a ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (GM7) stringwidth pop add def
+578 moveto
+CHORD_FONT setfont
+(GM7) show
+TEXT_FONT setfont
+( But in the end I  guess it's just a matter of ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+578 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+72 567 moveto
+( But in the end I  guess it's just a matter of  time) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Before we're ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+557 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+(Before we're  more than blood and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+557 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+(Before we're  more than blood and  bone ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+557 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 546 moveto
+(Before we're  more than blood and  bone ) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+516 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Hallelujah! ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+516 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Hallelujah!  Halle) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+516 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 505 moveto
+( Hallelujah!  Hallelujah! ) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+495 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm7/A) stringwidth pop add def
+495 moveto
+CHORD_FONT setfont
+(Bm7/A) show
+TEXT_FONT setfont
+( Halle - ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (GM7) stringwidth pop add def
+495 moveto
+CHORD_FONT setfont
+(GM7) show
+TEXT_FONT setfont
+( Halle -  luja - ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+495 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+( Halle -  luja -  ah! We're ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+495 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+( Halle -  luja -  ah! We're  more than blood and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+495 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+( Halle -  luja -  ah! We're  more than blood and  bone! ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#) stringwidth pop add def
+495 moveto
+CHORD_FONT setfont
+(F#) show
+TEXT_FONT setfont
+72 484 moveto
+( Halle -  luja -  ah! We're  more than blood and  bone! .) show
+TEXT_FONT setfont
+.9  setgray
+12  setlinewidth
+newpath
+70 476 moveto
+(repeat ) stringwidth rlineto
+stroke
+72 472 moveto
+0  setgray
+1 setlinewidth
+(repeat) show
+1  setlinewidth
+newpath
+62 525 moveto
+0 -53 rlineto
+closepath
+stroke
+/TEXT_FONT { /Arial findfont 10 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 8 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+(Blood and Bone) dup stringwidth pop 2 div
+612.000000 2 div exch sub 40.000000 3 div moveto
+show
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+1  setlinewidth
+0  setgray
+/TEXT_FONT { /Arial findfont 10 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 8 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+newpath
+72.000000 30.000000 moveto
+468.000000 0 rlineto
+stroke
+(Page 2) dup stringwidth pop
+612.000000 exch sub 1 inch sub 40.000000 3 div moveto
+show
+showpage
+%%EndPage: "2" 2
+%%Page: "3" 3
+%%BeginPageSetup
+%%EndPageSetup
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+/TEXT_FONT { /Arial findfont 17 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 15 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+( Fancy Feet) dup stringwidth pop 2 div
+612.000000 2 div exch sub 756 moveto
+show
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+( Music and Lyrics \(c\) 2013 Christian Bradley) dup stringwidth pop 2 div
+612.000000 2 div exch sub 739 moveto
+show
+TEXT_FONT setfont
+.9  setgray
+12  setlinewidth
+newpath
+70 689 moveto
+(Introduction ) stringwidth rlineto
+stroke
+72 685 moveto
+0  setgray
+1 setlinewidth
+(Introduction) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Daug) stringwidth pop add def
+675 moveto
+CHORD_FONT setfont
+(Daug) show
+TEXT_FONT setfont
+( / / / / / / / / ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+675 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+( / / / / / / / /  / / / / ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+675 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+72 664 moveto
+( / / / / / / / /  / / / /  / / / / ) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+654 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+( / / ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A7) stringwidth pop add def
+654 moveto
+CHORD_FONT setfont
+(A7) show
+TEXT_FONT setfont
+( / /  / / ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+654 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+( / /  / /  / / ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+654 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+( / /  / /  / /  / / ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+654 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+72 643 moveto
+( / /  / /  / /  / /  / / / /) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+613 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+72 602 moveto
+( Once upon a time I knew a pretty girl) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+592 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+72 581 moveto
+( She liked to dance, oh she liked to twirl) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+571 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+72 560 moveto
+( And even though I know I caught her eye) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+550 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+72 539 moveto
+( She fell in love with another guy) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Oh ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+529 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+72 518 moveto
+(Oh  he knew how to tango, waltz and swing) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+508 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+( He could dance to just about ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+508 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+72 497 moveto
+( He could dance to just about  anything) show
+/minhpos 72 def
+TEXT_FONT setfont
+(And ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+487 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+(And  they're still together and she's ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+487 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+(And  they're still together and she's  wearing his diamond ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+487 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+72 476 moveto
+(And  they're still together and she's  wearing his diamond  ring) show
+TEXT_FONT setfont
+.9  setgray
+12  setlinewidth
+newpath
+70 448 moveto
+(Walk down from G to E ) stringwidth rlineto
+stroke
+72 444 moveto
+0  setgray
+1 setlinewidth
+(Walk down from G to E) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Oh, baby ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+434 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+(Oh, baby  I've got some ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em7b5) stringwidth pop add def
+434 moveto
+CHORD_FONT setfont
+(Em7b5) show
+TEXT_FONT setfont
+(Oh, baby  I've got some  kind of de) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (B7) stringwidth pop add def
+434 moveto
+CHORD_FONT setfont
+(B7) show
+TEXT_FONT setfont
+72 423 moveto
+(Oh, baby  I've got some  kind of deficiency) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+413 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+( in the ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E7) stringwidth pop add def
+413 moveto
+CHORD_FONT setfont
+(E7) show
+TEXT_FONT setfont
+( in the  way I move my ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Am) stringwidth pop add def
+413 moveto
+CHORD_FONT setfont
+(Am) show
+TEXT_FONT setfont
+( in the  way I move my  feet ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (AmM7) stringwidth pop add def
+413 moveto
+CHORD_FONT setfont
+(AmM7) show
+TEXT_FONT setfont
+( in the  way I move my  feet  ... ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Am7) stringwidth pop add def
+413 moveto
+CHORD_FONT setfont
+(Am7) show
+TEXT_FONT setfont
+( in the  way I move my  feet  ...  ... ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (AmM7) stringwidth pop add def
+413 moveto
+CHORD_FONT setfont
+(AmM7) show
+TEXT_FONT setfont
+72 402 moveto
+( in the  way I move my  feet  ...  ...  ...) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (C) stringwidth pop add def
+392 moveto
+CHORD_FONT setfont
+(C) show
+TEXT_FONT setfont
+( I feel a ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Cm) stringwidth pop add def
+392 moveto
+CHORD_FONT setfont
+(Cm) show
+TEXT_FONT setfont
+( I feel a  fool, with ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+392 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+( I feel a  fool, with  full efficien) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+392 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+72 381 moveto
+( I feel a  fool, with  full efficiency) show
+/minhpos 72 def
+TEXT_FONT setfont
+(When I ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+371 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+(When I  get out there and try to ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+371 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+(When I  get out there and try to  shake it to the ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+371 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+72 360 moveto
+(When I  get out there and try to  shake it to the  beat) show
+1  setlinewidth
+newpath
+62 443 moveto
+0 -83 rlineto
+closepath
+stroke
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+330 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+72 319 moveto
+(I shake it to the left, I shimmy to the right) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+309 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+72 298 moveto
+( I movin all around and I feel alright) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Then ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+288 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+72 277 moveto
+(Then  I look up and I'm all alone) show
+/minhpos 72 def
+TEXT_FONT setfont
+(And ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+267 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+72 256 moveto
+(And  womp womp woooomp goes the old trombone) show
+/minhpos 72 def
+TEXT_FONT setfont
+(My ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+246 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+72 235 moveto
+(My  face gets red, my mouth goes dry) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+225 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+( Please pretty momma won't you ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+225 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+72 214 moveto
+( Please pretty momma won't you  tell me why) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+204 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+( Every time I do it makes me ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+204 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+( Every time I do it makes me  feel like I'm ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+204 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+( Every time I do it makes me  feel like I'm  gonna ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+204 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+72 193 moveto
+( Every time I do it makes me  feel like I'm  gonna  cry) show
+/minhpos 72 def
+TEXT_FONT setfont
+(But someday ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+163 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+(But someday  I feel that ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em7b5) stringwidth pop add def
+163 moveto
+CHORD_FONT setfont
+(Em7b5) show
+TEXT_FONT setfont
+(But someday  I feel that  I'll fulfill a ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (B7) stringwidth pop add def
+163 moveto
+CHORD_FONT setfont
+(B7) show
+TEXT_FONT setfont
+72 152 moveto
+(But someday  I feel that  I'll fulfill a  fantasy) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+142 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+( I've had since ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E7) stringwidth pop add def
+142 moveto
+CHORD_FONT setfont
+(E7) show
+TEXT_FONT setfont
+( I've had since  I was seven) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Am) stringwidth pop add def
+142 moveto
+CHORD_FONT setfont
+(Am) show
+TEXT_FONT setfont
+( I've had since  I was seventeen ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (AmM7) stringwidth pop add def
+142 moveto
+CHORD_FONT setfont
+(AmM7) show
+TEXT_FONT setfont
+( I've had since  I was seventeen  ... ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Am7) stringwidth pop add def
+142 moveto
+CHORD_FONT setfont
+(Am7) show
+TEXT_FONT setfont
+( I've had since  I was seventeen  ...  ... ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (AmM7) stringwidth pop add def
+142 moveto
+CHORD_FONT setfont
+(AmM7) show
+TEXT_FONT setfont
+72 131 moveto
+( I've had since  I was seventeen  ...  ...  ...) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (C) stringwidth pop add def
+121 moveto
+CHORD_FONT setfont
+(C) show
+TEXT_FONT setfont
+( I'll feel so ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Cm) stringwidth pop add def
+121 moveto
+CHORD_FONT setfont
+(Cm) show
+TEXT_FONT setfont
+( I'll feel so  cool, and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+121 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+( I'll feel so  cool, and  full of ecsta) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+121 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+72 110 moveto
+( I'll feel so  cool, and  full of ecstasy) show
+/minhpos 72 def
+TEXT_FONT setfont
+(When I'm ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+100 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+(When I'm  swinging a) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A7) stringwidth pop add def
+100 moveto
+CHORD_FONT setfont
+(A7) show
+TEXT_FONT setfont
+(When I'm  swinging around with ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+100 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+(When I'm  swinging around with  you on my ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+100 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+(When I'm  swinging around with  you on my  fancy ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+100 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+72 89 moveto
+(When I'm  swinging around with  you on my  fancy  feet) show
+1  setlinewidth
+newpath
+62 172 moveto
+0 -83 rlineto
+closepath
+stroke
+TEXT_FONT setfont
+.9  setgray
+12  setlinewidth
+newpath
+70 61 moveto
+(Instrumental \(Brass\) ) stringwidth rlineto
+stroke
+72 57 moveto
+0  setgray
+1 setlinewidth
+(Instrumental \(Brass\)) show
+TEXT_FONT setfont
+.9  setgray
+12  setlinewidth
+newpath
+70 49 moveto
+(Instrumental \(Ragtime Piano\) ) stringwidth rlineto
+stroke
+72 45 moveto
+0  setgray
+1 setlinewidth
+(Instrumental \(Ragtime Piano\)) show
+1  setlinewidth
+0  setgray
+/TEXT_FONT { /Arial findfont 10 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 8 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+newpath
+72.000000 30.000000 moveto
+468.000000 0 rlineto
+stroke
+(Page 3) dup stringwidth pop
+612.000000 exch sub 1 inch sub 40.000000 3 div moveto
+show
+showpage
+%%EndPage: "3" 3
+%%Page: "4" 4
+%%BeginPageSetup
+%%EndPageSetup
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+/minhpos 72 def
+TEXT_FONT setfont
+(Yeah I know ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+736 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+(Yeah I know  I may be ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em7b5) stringwidth pop add def
+736 moveto
+CHORD_FONT setfont
+(Em7b5) show
+TEXT_FONT setfont
+(Yeah I know  I may be  seeking simple ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (B7) stringwidth pop add def
+736 moveto
+CHORD_FONT setfont
+(B7) show
+TEXT_FONT setfont
+72 725 moveto
+(Yeah I know  I may be  seeking simple  vanity) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Em) stringwidth pop add def
+715 moveto
+CHORD_FONT setfont
+(Em) show
+TEXT_FONT setfont
+( But one day I'll ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E7) stringwidth pop add def
+715 moveto
+CHORD_FONT setfont
+(E7) show
+TEXT_FONT setfont
+( But one day I'll  break out on the ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Am) stringwidth pop add def
+715 moveto
+CHORD_FONT setfont
+(Am) show
+TEXT_FONT setfont
+( But one day I'll  break out on the  scene ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (AmM7) stringwidth pop add def
+715 moveto
+CHORD_FONT setfont
+(AmM7) show
+TEXT_FONT setfont
+( But one day I'll  break out on the  scene ... ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Am7) stringwidth pop add def
+715 moveto
+CHORD_FONT setfont
+(Am7) show
+TEXT_FONT setfont
+( But one day I'll  break out on the  scene ...  ... ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (AmM7) stringwidth pop add def
+715 moveto
+CHORD_FONT setfont
+(AmM7) show
+TEXT_FONT setfont
+72 704 moveto
+( But one day I'll  break out on the  scene ...  ... ... ) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (C) stringwidth pop add def
+694 moveto
+CHORD_FONT setfont
+(C) show
+TEXT_FONT setfont
+( And how they'll ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Cm) stringwidth pop add def
+694 moveto
+CHORD_FONT setfont
+(Cm) show
+TEXT_FONT setfont
+( And how they'll  swoon, with ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+694 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+( And how they'll  swoon, with  sweet insani) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+694 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+72 683 moveto
+( And how they'll  swoon, with  sweet insanity) show
+/minhpos 72 def
+TEXT_FONT setfont
+(When I'm ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+673 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+(When I'm  swinging a) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A7) stringwidth pop add def
+673 moveto
+CHORD_FONT setfont
+(A7) show
+TEXT_FONT setfont
+(When I'm  swinging around with ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+673 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+(When I'm  swinging around with  you on my ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+673 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+(When I'm  swinging around with  you on my  fancy ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+673 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+(When I'm  swinging around with  you on my  fancy  feet ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E7) stringwidth pop add def
+673 moveto
+CHORD_FONT setfont
+(E7) show
+TEXT_FONT setfont
+72 662 moveto
+(When I'm  swinging around with  you on my  fancy  feet   ) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+652 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+( A brand new ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A7) stringwidth pop add def
+652 moveto
+CHORD_FONT setfont
+(A7) show
+TEXT_FONT setfont
+( A brand new  pair of ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+652 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+( A brand new  pair of  shoes on my ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+652 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+( A brand new  pair of  shoes on my  fancy ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+652 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+( A brand new  pair of  shoes on my  fancy  feet... ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E7) stringwidth pop add def
+652 moveto
+CHORD_FONT setfont
+(E7) show
+TEXT_FONT setfont
+72 641 moveto
+( A brand new  pair of  shoes on my  fancy  feet...  - yea darlin!) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+631 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+( Dancing a) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A7) stringwidth pop add def
+631 moveto
+CHORD_FONT setfont
+(A7) show
+TEXT_FONT setfont
+( Dancing away these ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+631 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+( Dancing away these  blues on my ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+631 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+( Dancing away these  blues on my  fancy ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+631 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+( Dancing away these  blues on my  fancy  feet... ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E7) stringwidth pop add def
+631 moveto
+CHORD_FONT setfont
+(E7) show
+TEXT_FONT setfont
+72 620 moveto
+( Dancing away these  blues on my  fancy  feet...  - come on girl!) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+610 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+( I'l be the ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A7) stringwidth pop add def
+610 moveto
+CHORD_FONT setfont
+(A7) show
+TEXT_FONT setfont
+( I'l be the  one you ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+610 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+( I'l be the  one you  choose with my ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+610 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+( I'l be the  one you  choose with my  fancy ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+610 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+( I'l be the  one you  choose with my  fancy  feet... ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E7) stringwidth pop add def
+610 moveto
+CHORD_FONT setfont
+(E7) show
+TEXT_FONT setfont
+72 599 moveto
+( I'l be the  one you  choose with my  fancy  feet...  - one more time!) show
+/minhpos 72 def
+TEXT_FONT setfont
+(I'll ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+589 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+(I'll  finally be ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A7) stringwidth pop add def
+589 moveto
+CHORD_FONT setfont
+(A7) show
+TEXT_FONT setfont
+(I'll  finally be  over ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+589 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+(I'll  finally be  over  you with my ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D7) stringwidth pop add def
+589 moveto
+CHORD_FONT setfont
+(D7) show
+TEXT_FONT setfont
+(I'll  finally be  over  you with my  fancy ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G) stringwidth pop add def
+589 moveto
+CHORD_FONT setfont
+(G) show
+TEXT_FONT setfont
+72 578 moveto
+(I'll  finally be  over  you with my  fancy  feet...) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (g6add9) stringwidth pop add def
+548 moveto
+CHORD_FONT setfont
+(g6add9) show
+TEXT_FONT setfont
+72 537 moveto
+( / / / / ) show
+/TEXT_FONT { /Arial findfont 10 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 8 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+(Fancy Feet) dup stringwidth pop 2 div
+612.000000 2 div exch sub 40.000000 3 div moveto
+show
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+1  setlinewidth
+newpath
+62 745 moveto
+0 -258 rlineto
+closepath
+stroke
+1  setlinewidth
+0  setgray
+/TEXT_FONT { /Arial findfont 10 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 8 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+newpath
+72.000000 30.000000 moveto
+468.000000 0 rlineto
+stroke
+(Page 4) dup stringwidth pop
+612.000000 exch sub 1 inch sub 40.000000 3 div moveto
+show
+showpage
+%%EndPage: "4" 4
+%%Page: "5" 5
+%%BeginPageSetup
+%%EndPageSetup
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+/TEXT_FONT { /Arial findfont 17 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 15 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+( Feeling Something Too) dup stringwidth pop 2 div
+612.000000 2 div exch sub 756 moveto
+show
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+( Words and Music \(c\) 2012 Christian Bradley) dup stringwidth pop 2 div
+612.000000 2 div exch sub 739 moveto
+show
+TEXT_FONT setfont
+.9  setgray
+12  setlinewidth
+newpath
+70 689 moveto
+(Introduction ) stringwidth rlineto
+stroke
+72 685 moveto
+0  setgray
+1 setlinewidth
+(Introduction) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+675 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+( / / / / / / ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Dm) stringwidth pop add def
+675 moveto
+CHORD_FONT setfont
+(Dm) show
+TEXT_FONT setfont
+( / / / / / /  / / / / / ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Dm13) stringwidth pop add def
+675 moveto
+CHORD_FONT setfont
+(Dm13) show
+TEXT_FONT setfont
+72 664 moveto
+( / / / / / /  / / / / /  /) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+654 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+( / / / / / / ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Dm) stringwidth pop add def
+654 moveto
+CHORD_FONT setfont
+(Dm) show
+TEXT_FONT setfont
+72 643 moveto
+( / / / / / /  / / / / / /) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+613 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+(I want to touch just the ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G#) stringwidth pop add def
+613 moveto
+CHORD_FONT setfont
+(G#) show
+TEXT_FONT setfont
+72 602 moveto
+(I want to touch just the  hem of your dress) show
+/minhpos 72 def
+TEXT_FONT setfont
+(To ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+592 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+(To  see if you blush, to ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+592 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+72 581 moveto
+(To  see if you blush, to  make you confess) show
+/minhpos 72 def
+TEXT_FONT setfont
+(That ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+571 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+(That  you're feeling ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E7) stringwidth pop add def
+571 moveto
+CHORD_FONT setfont
+(E7) show
+TEXT_FONT setfont
+(That  you're feeling  something that ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#m) stringwidth pop add def
+571 moveto
+CHORD_FONT setfont
+(F#m) show
+TEXT_FONT setfont
+72 560 moveto
+(That  you're feeling  something that  can't be expressed) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Cause ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+550 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+(Cause  I'm feeling ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+550 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+(Cause  I'm feeling  something ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+550 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+(Cause  I'm feeling  something  too ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+550 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+72 539 moveto
+(Cause  I'm feeling  something  too ... ) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Well a ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+509 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+(Well a  funny thing happens when you're ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G#) stringwidth pop add def
+509 moveto
+CHORD_FONT setfont
+(G#) show
+TEXT_FONT setfont
+72 498 moveto
+(Well a  funny thing happens when you're  looking at me) show
+/minhpos 72 def
+TEXT_FONT setfont
+(My ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+488 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+(My  hands start to tremble, I'm ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+488 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+72 477 moveto
+(My  hands start to tremble, I'm  weak in the knees) show
+/minhpos 72 def
+TEXT_FONT setfont
+(If ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+467 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+(If  you're feeling ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E7) stringwidth pop add def
+467 moveto
+CHORD_FONT setfont
+(E7) show
+TEXT_FONT setfont
+(If  you're feeling  something then ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#m) stringwidth pop add def
+467 moveto
+CHORD_FONT setfont
+(F#m) show
+TEXT_FONT setfont
+72 456 moveto
+(If  you're feeling  something then  tell me please) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Cause ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+446 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+(Cause  I'm feeling ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+446 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+(Cause  I'm feeling  something ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+446 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+(Cause  I'm feeling  something  too ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A7) stringwidth pop add def
+446 moveto
+CHORD_FONT setfont
+(A7) show
+TEXT_FONT setfont
+72 435 moveto
+(Cause  I'm feeling  something  too ...) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Dm) stringwidth pop add def
+405 moveto
+CHORD_FONT setfont
+(Dm) show
+TEXT_FONT setfont
+( We can build our own ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+405 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+( We can build our own  ho) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Dm) stringwidth pop add def
+405 moveto
+CHORD_FONT setfont
+(Dm) show
+TEXT_FONT setfont
+72 394 moveto
+( We can build our own  home) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Get married and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+384 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+72 373 moveto
+(Get married and  love each other) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (C#) stringwidth pop add def
+363 moveto
+CHORD_FONT setfont
+(C#) show
+TEXT_FONT setfont
+( Or maybe you're ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#m) stringwidth pop add def
+363 moveto
+CHORD_FONT setfont
+(F#m) show
+TEXT_FONT setfont
+( Or maybe you're  meant for another ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+363 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+72 352 moveto
+( Or maybe you're  meant for another  one) show
+/minhpos 72 def
+TEXT_FONT setfont
+(And we're more like ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+342 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+(And we're more like  sister and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E7) stringwidth pop add def
+342 moveto
+CHORD_FONT setfont
+(E7) show
+TEXT_FONT setfont
+72 331 moveto
+(And we're more like  sister and  brother) show
+1  setlinewidth
+newpath
+62 414 moveto
+0 -83 rlineto
+closepath
+stroke
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+301 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+( But let's face the ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G#) stringwidth pop add def
+301 moveto
+CHORD_FONT setfont
+(G#) show
+TEXT_FONT setfont
+72 290 moveto
+( But let's face the  facts of life) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Cause ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+280 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+(Cause  you want a husband and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+280 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+72 269 moveto
+(Cause  you want a husband and  I want a wife) show
+/minhpos 72 def
+TEXT_FONT setfont
+(And ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+259 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+(And  if we had ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E7) stringwidth pop add def
+259 moveto
+CHORD_FONT setfont
+(E7) show
+TEXT_FONT setfont
+(And  if we had  children, well ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#m) stringwidth pop add def
+259 moveto
+CHORD_FONT setfont
+(F#m) show
+TEXT_FONT setfont
+72 248 moveto
+(And  if we had  children, well  that would be nice) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Cause ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+238 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+(Cause  I'm feeling ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+238 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+(Cause  I'm feeling  something ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+238 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+(Cause  I'm feeling  something  too ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+238 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+72 227 moveto
+(Cause  I'm feeling  something  too ...) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Let's ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+197 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+(Let's  move to the mountains and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (G#) stringwidth pop add def
+197 moveto
+CHORD_FONT setfont
+(G#) show
+TEXT_FONT setfont
+72 186 moveto
+(Let's  move to the mountains and  sleep under trees) show
+/minhpos 72 def
+TEXT_FONT setfont
+(And ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (D) stringwidth pop add def
+176 moveto
+CHORD_FONT setfont
+(D) show
+TEXT_FONT setfont
+(And  sing our pretty songs for the ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+176 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+72 165 moveto
+(And  sing our pretty songs for the  birds and the bees) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Well, ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+155 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+(Well,  I could be ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E7) stringwidth pop add def
+155 moveto
+CHORD_FONT setfont
+(E7) show
+TEXT_FONT setfont
+(Well,  I could be  Adam and ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (F#m) stringwidth pop add def
+155 moveto
+CHORD_FONT setfont
+(F#m) show
+TEXT_FONT setfont
+72 144 moveto
+(Well,  I could be  Adam and  you'd be naive...) show
+/minhpos 72 def
+TEXT_FONT setfont
+(Cause ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Bm) stringwidth pop add def
+134 moveto
+CHORD_FONT setfont
+(Bm) show
+TEXT_FONT setfont
+(Cause  I'm feeling ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (E) stringwidth pop add def
+134 moveto
+CHORD_FONT setfont
+(E) show
+TEXT_FONT setfont
+(Cause  I'm feeling  something ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+134 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+72 123 moveto
+(Cause  I'm feeling  something  too..) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+93 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+( / / / / / / ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Dm) stringwidth pop add def
+93 moveto
+CHORD_FONT setfont
+(Dm) show
+TEXT_FONT setfont
+( / / / / / /  / / / / / ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Dm13) stringwidth pop add def
+93 moveto
+CHORD_FONT setfont
+(Dm13) show
+TEXT_FONT setfont
+72 82 moveto
+( / / / / / /  / / / / /  / ) show
+/minhpos 72 def
+TEXT_FONT setfont
+() stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+72 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+( / / / / / / ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (Dm) stringwidth pop add def
+72 moveto
+CHORD_FONT setfont
+(Dm) show
+TEXT_FONT setfont
+( / / / / / /  Feeling something ) stringwidth  pop 72 add 
+dup minhpos lt
+     {pop minhpos} if
+dup /minhpos exch (A) stringwidth pop add def
+72 moveto
+CHORD_FONT setfont
+(A) show
+TEXT_FONT setfont
+72 61 moveto
+( / / / / / /  Feeling something  too.) show
+1  setlinewidth
+0  setgray
+/TEXT_FONT { /Arial findfont 10 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 8 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+newpath
+72.000000 30.000000 moveto
+468.000000 0 rlineto
+stroke
+(Page 5) dup stringwidth pop
+612.000000 exch sub 1 inch sub 40.000000 3 div moveto
+show
+showpage
+%%EndPage: "5" 5
+%%Page: "6" 6
+%%BeginPageSetup
+%%EndPageSetup
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+/TEXT_FONT { /Arial findfont 10 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 8 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+(Feeling Something Too) dup stringwidth pop 2 div
+612.000000 2 div exch sub 40.000000 3 div moveto
+show
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+1  setlinewidth
+0  setgray
+/TEXT_FONT { /Arial findfont 10 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 8 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+newpath
+72.000000 30.000000 moveto
+468.000000 0 rlineto
+stroke
+(Page 6) dup stringwidth pop
+612.000000 exch sub 1 inch sub 40.000000 3 div moveto
+show
+showpage
+%%EndPage: "6" 6
+%%Page: "7" 7
+%%BeginPageSetup
+%%EndPageSetup
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+/TEXT_FONT { /Arial findfont 22 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 20 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+(Index) dup stringwidth pop 2 div
+612.000000 2 div exch sub 756 moveto
+show
+/TEXT_FONT { /Arial findfont 17 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 15 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+72 724 moveto
+(Blood and Bone) show
+500 724 moveto
+(1) show
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+108 712 moveto
+( Words and Music \(c\) 2012 Christian Bradley) show
+/TEXT_FONT { /Arial findfont 17 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 15 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+72 692 moveto
+(Fancy Feet) show
+500 692 moveto
+(3) show
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+108 680 moveto
+( Music and Lyrics \(c\) 2013 Christian Bradley) show
+/TEXT_FONT { /Arial findfont 17 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 15 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+72 660 moveto
+(Feeling Something Too) show
+500 660 moveto
+(5) show
+/TEXT_FONT { /Arial findfont 12 scalefont } def
+/Arial /Arial ISO Re-encode
+/MONO_FONT { /Courier findfont 10 scalefont } def
+/Courier /Courier ISO Re-encode
+TEXT_FONT setfont
+108 648 moveto
+( Words and Music \(c\) 2012 Christian Bradley) show
+showpage
+%%EndPage: "7" 7
+%%Trailer
+%%Pages: 7 1
+%%DocumentFonts: Arial Arial-Bold Courier
+%%EOF
